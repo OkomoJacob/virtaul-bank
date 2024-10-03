@@ -68,3 +68,38 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+##Resources
+
+1. [React Styled Components](https://styled-components.com/)
+
+Install and use React styled components in your application
+
+```bash
+npm install styled-components
+```
+
+2. [React Icons](https://react-icons.github.io/react-icons/)
+
+Install and use React styled components in your application
+
+```bash
+npm install react-icons --save
+```
+
+### Usage
+
+```ts
+import { FaBars } from "react-icons/fa";
+
+class Question extends React.Component {
+  render() {
+    return (
+      <h3>
+        {" "}
+        Lets go for a <FaBeer />?{" "}
+      </h3>
+    );
+  }
+}
+```
