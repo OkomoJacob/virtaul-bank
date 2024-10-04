@@ -1,12 +1,32 @@
 import React from "react";
-import { SidebarContainer, Icon, CloseIcon } from "./SidebarElements";
+import {
+  SidebarContainer,
+  Icon,
+  CloseIcon,
+  SidebarWrapper,
+  SidebarMenu,
+  SidebarLink,
+  SideBtnWrap,
+  SidebarRoute,
+} from "./SidebarElements";
 
-function Sidebar() {
+const Sidebar = ({isOpen, toggleNavbar}) => {
   return (
-    <SidebarContainer>
-      <Icon>
+    <SidebarContainer isOpen={isOpen} onClick={toggleNavbar}>
+      <Icon onClick={toggleNavbar}>
         <CloseIcon />
       </Icon>
+      <SidebarWrapper>
+        <SidebarMenu>
+          <SidebarLink to="about">About</SidebarLink>
+          <SidebarLink to="discover">Discover</SidebarLink>
+          <SidebarLink to="services">Services</SidebarLink>
+          <SidebarLink to="signup">Sign Up</SidebarLink>
+        </SidebarMenu>
+        <SideBtnWrap>
+          <SidebarRoute to="signin">Sign In</SidebarRoute>
+        </SideBtnWrap>
+      </SidebarWrapper>
     </SidebarContainer>
   );
 }
