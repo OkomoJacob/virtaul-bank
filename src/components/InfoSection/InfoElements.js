@@ -48,6 +48,10 @@ export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   padding-bottom: 60px;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0px;
+  }
 `;
 
 export const TopLine = styled.p`
@@ -94,4 +98,5 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+  border-radius: 1rem;
 `;
