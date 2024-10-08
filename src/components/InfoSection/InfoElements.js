@@ -4,14 +4,14 @@ export const InfoContainer = styled.div`
   color: #fff;
   background: ${({ $lightBg }) => ($lightBg ? "#f9f9f9" : "#010606")};
   @media screen and (max-width: 768px) {
-    padding: 6rem 0;
+    padding: 3rem 0;
   }
 `;
 
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: 600px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -81,7 +81,7 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
+  color: ${({ $darkText }) => ($darkText ? "#010606" : "#fff")};
 `;
 
 export const BtnWrap = styled.div`
@@ -99,4 +99,8 @@ export const Img = styled.img`
   margin: 0 0 10px 0;
   padding-right: 0;
   border-radius: 1rem;
+  
+  @media screen and (max-width: 768px){
+    margin-top: 1rem;
+  }
 `;
