@@ -31,7 +31,7 @@ const Navbar = ({ toggleNavbar }) => {
     <>
       <Nav $scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to="/">Pesa</NavLogo>
+          <NavLogo to="/">Pesa Otas</NavLogo>
           <MenuIcon onClick={toggleNavbar}>
             <HiBars3BottomRight />
           </MenuIcon>
