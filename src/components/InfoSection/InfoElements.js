@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
-
+  background: ${({ $lightBg }) => ($lightBg ? "#f9f9f9" : "#010606")};
   @media screen and (max-width: 768px) {
     padding: 6rem 0;
   }
@@ -23,14 +22,14 @@ export const InfoWrapper = styled.div`
 
 export const InfoRow = styled.div`
   display: grid;
-  grid-template-columns: minmax(auto 1fr);
+  grid-auto-columns: minmax(auto 1fr);
   align-items: center;
-  grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col2 col1` : `'col1 col2`};
+  grid-template-areas: ${({ $imgStart }) =>
+    $imgStart ? `'col2 col1` : `'col1 col2`};
 
   @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2`};
+    grid-template-areas: ${({ $imgStart }) =>
+      $imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2`};
   }
 `;
 
@@ -53,8 +52,8 @@ export const TextWrapper = styled.div`
 
 export const TopLine = styled.p`
   color: #01bf71;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 16px;
+  line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
@@ -64,9 +63,9 @@ export const TopLine = styled.p`
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 24px;
-  line-height: 1.1px;
+  line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
+  color: ${({ $lightText }) => ($lightText ? "#f7f8fa" : "#010606")};
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
