@@ -71,7 +71,9 @@ export const FooterLink = styled(LinkR)`
 `;
 
 export const SocialMedia = styled.section`
-  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
   width: 100%;
 `;
 
@@ -79,7 +81,8 @@ export const SocialMediaWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1200px;
+  width: 100%;
   margin: 40px auto 0 auto;
 
   @media screen and (max-width: 820px) {
