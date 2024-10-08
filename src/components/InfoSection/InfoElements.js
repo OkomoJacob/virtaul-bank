@@ -99,8 +99,18 @@ export const Img = styled.img`
   margin: 0 0 10px 0;
   padding-right: 0;
   border-radius: 1rem;
-  
-  @media screen and (max-width: 768px){
+
+  @media screen and (max-width: 768px) {
     margin-top: 1rem;
+
+    &:nth-last-child(2) {
+      height: 90%;
+    }
+  }
+  @media (min-width: 550px) and (max-width: 768px) {
+    &:nth-last-child(2),
+    &:last-child {
+      width: 90%;
+    }
   }
 `;
