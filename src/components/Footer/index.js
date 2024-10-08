@@ -64,22 +64,19 @@ const Footer = () => {
           <SocialMediaWrap>
             <SocialLogo to="/">Pesa Otas</SocialLogo>
             <WebsiteRights>
-              Pesa Otas &copy {new Date().getFullYear()} Allrights Reserved
+              Pesa Otas &#169; {new Date().getFullYear()} Allrights Reserved
             </WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href="/" target="_blank" arial-label="LinkedIn">
+              <SocialIconLink href="/" target="_blank" aria-label="LinkedIn">
                 <FaLinkedin />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" arial-label="Facebook">
+              <SocialIconLink href="/" target="_blank" aria-label="Facebook">
                 <FaFacebook />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" arial-label="Instagram">
-                <FaFacebook />
-              </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" arial-label="YouTube">
+              <SocialIconLink href="/" target="_blank" aria-label="YouTube">
                 <IoLogoYoutube />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" arial-label="X">
+              <SocialIconLink href="/" target="_blank" aria-label="X">
                 <FaXTwitter />
               </SocialIconLink>
             </SocialIcons>
