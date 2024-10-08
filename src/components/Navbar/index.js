@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import {
   Nav,
@@ -13,9 +13,23 @@ import {
 } from "./NavbarElements";
 
 const Navbar = ({ toggleNavbar }) => {
+  const [scrollNav, setscrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setscrollNav(true);
+    } else {
+      setscrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
   return (
     <>
-      <Nav>
+      <Nav $scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/">Pesa</NavLogo>
           <MenuIcon onClick={toggleNavbar}>
