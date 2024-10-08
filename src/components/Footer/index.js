@@ -7,7 +7,16 @@ import {
   FooterLinkItems,
   FooterLinkTitle,
   FooterLink,
+  SocialMedia,
+  SocialMediaWrap,
+  SocialLogo,
+  WebsiteRights,
+  SocialIcons,
+  SocialIconLink,
 } from "./FooterElements";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoLogoYoutube } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -54,6 +63,26 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/">Pesa Otas</SocialLogo>
+            <WebsiteRights>
+              Pesa Otas &copy {new Date().getFullYear()} Allrights Reserved
+            </WebsiteRights>
+            <SocialIcons>
+              <SocialIconLink href="/" target="_blank" arial-label="LinkedIn">
+                <FaLinkedin />
+              </SocialIconLink>
+              <SocialIconLink href="/" target="_blank" arial-label="Facebook">
+                <FaFacebook />
+              </SocialIconLink>
+              <SocialIconLink href="/" target="_blank" arial-label="Instagram">
+                <FaFacebook />
+              </SocialIconLink>
+              <SocialIconLink href="/" target="_blank" arial-label="YouTube">
+                <IoLogoYoutube />
+              </SocialIconLink>
+              <SocialIconLink href="/" target="_blank" arial-label="X">
+                <FaXTwitter />
+              </SocialIconLink>
+            </SocialIcons>
           </SocialMediaWrap>
         </SocialMedia>
       </FooterWrap>
