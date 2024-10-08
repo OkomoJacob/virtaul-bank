@@ -18,6 +18,10 @@ export const InfoWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+
+  @media screen and (max-width: 992px) {
+    height: 718px;
+  }
 `;
 
 export const InfoRow = styled.div`
@@ -100,17 +104,17 @@ export const Img = styled.img`
   padding-right: 0;
   border-radius: 1rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     margin-top: 1rem;
 
     &:nth-last-child(2) {
       height: 90%;
     }
   }
-  @media (min-width: 550px) and (max-width: 768px) {
+  @media (min-width: 550px) and (max-width: 991px) {
     &:nth-last-child(2),
     &:last-child {
-      width: 90%;
+      margin-bottom: 1rem;
     }
   }
 `;
