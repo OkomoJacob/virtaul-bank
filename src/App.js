@@ -1,13 +1,17 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages";
+import SigninPage from "./pages/signin";
+// import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
-      <Sidebar />
-      <Navbar />
+      {/* <Navbar /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SigninPage />} />
+      </Routes>
     </Router>
   );
 }

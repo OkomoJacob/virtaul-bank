@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import {
   Nav,
@@ -11,32 +11,110 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
+import { animateScroll as scroll } from "react-scroll";
 
-const Navbar = () => {
+const Navbar = ({ toggleNavbar }) => {
+  const [scrollNav, setscrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setscrollNav(true);
+    } else {
+      setscrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
-      <Nav>
+      <Nav $scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to="/">dolla</NavLogo>
-          <MenuIcon>
+          <NavLogo to="/" onClick={toggleHome}>
+            Pesa Otas
+          </NavLogo>
+          <MenuIcon onClick={toggleNavbar}>
             <HiBars3BottomRight />
           </MenuIcon>
           <NavMenu>
             <NabvItem>
-              <NavLinks to="about">About</NavLinks>
+              <NavLinks
+                to="about"
+                smooth={true}
+                duration={500}
+                delay={200}
+                spy={true}
+                exact="true"
+                offset={80}
+              >
+                About
+              </NavLinks>
             </NabvItem>
             <NabvItem>
-              <NavLinks to="discover">Discover</NavLinks>
+              <NavLinks
+                to="discover"
+                smooth={true}
+                duration={500}
+                delay={200}
+                spy={true}
+                exact="true"
+                offset={80}
+              >
+                Discover
+              </NavLinks>
             </NabvItem>
             <NabvItem>
-              <NavLinks to="services">Services</NavLinks>
+              <NavLinks
+                to="stocks"
+                smooth={true}
+                duration={500}
+                delay={200}
+                spy={true}
+                exact="true"
+                offset={80}
+              >
+                Stocks
+              </NavLinks>
             </NabvItem>
             <NabvItem>
-              <NavLinks to="signup">Sign Up</NavLinks>
+              <NavLinks
+                to="services"
+                smooth={true}
+                duration={500}
+                delay={200}
+                spy={true}
+                exact="true"
+                offset={80}
+              >
+                Services
+              </NavLinks>
+            </NabvItem>
+            <NabvItem>
+              <NavLinks
+                to="signup"
+                smooth={true}
+                duration={500}
+                delay={200}
+                spy={true}
+                exact="true"
+                offset={80}
+              >
+                Sign Up
+              </NavLinks>
             </NabvItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <NavBtnLink
+              to="/signin"
+            >
+              Sign In
+            </NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
