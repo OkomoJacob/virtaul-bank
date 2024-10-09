@@ -1,6 +1,6 @@
 services:
   # Developement Service
-  virtual-app-dev:
+  virtual-bank-dev:
     build:
       context: .
       dockerfile: Dockerfile.dev
@@ -18,7 +18,7 @@ services:
       - NODE_ENV=developement
       
    # Producton Service
-  virtual-app-prod:
+  virtual-bank-prod:
     build:
       context: .
       dockerfile: Dockerfile.prod

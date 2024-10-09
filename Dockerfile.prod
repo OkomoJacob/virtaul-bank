@@ -17,9 +17,8 @@ RUN npm run build
 # Productoin Stage to serve our static files
 FROM nginx:alpine
 
-
 # Copy the build output to replace with the default nginx contents
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Start Nginx server in production mode
-CMD ["nginx", "-g" "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
