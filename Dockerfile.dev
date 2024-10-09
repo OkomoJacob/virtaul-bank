@@ -3,6 +3,7 @@ FROM node:22-alpine
 # Setup the working directory in th container
 WORKDIR /app
 
+# Copy the Packages content & install them in the container
 COPY package*.json ./
 RUN npm install
 

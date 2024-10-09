@@ -3,7 +3,8 @@ services:
   virtual-app-dev:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
+      
     volumes:
       - ./src:/app/src
       - ./public:/app/public
