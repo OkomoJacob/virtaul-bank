@@ -23,7 +23,7 @@ export const homeObjectTwo = {
   lightBg: true,
   lightText: false,
   lightTextDescr: false,
-  topLine: "Unlimited Access",
+  topLine: "Discover Unlimited Access",
   headline: "Login to your account at anytime.",
   description:
     "We have you covered no matter where you are located. You anly need access to Internet & a computer/smartphone.",
@@ -37,19 +37,37 @@ export const homeObjectTwo = {
 };
 
 export const homeObjectThree = {
-  id: "signup",
+  id: "stocks",
   lightBg: false,
   lightText: true,
   lightTextDescr: true,
-  topLine: "Accrue your Savings",
+  topLine: "Grow your Stocks",
   headline: "Effortlessly grow your portfolio with out savings plan.",
   description:
     "When all your financial plans are blocked, your savings is your only friend on such a rainy day. Enjoy our savings plan with great interest on your investment plans.",
-  buttonLabel: "Start Now!",
+  buttonLabel: "Learn More",
   imgStart: false,
   img: require("../../images/savings.png"),
   alt: "Car",
   dark: true,
   primary: true,
   darkText: false,
+};
+
+export const homeObjectFour = {
+  id: "signup",
+  lightBg: true,
+  lightText: false,
+  lightTextDescr: false,
+  topLine: "Join Us Today",
+  headline: "Login to your account at anytime.",
+  description:
+    "We have you covered no matter where you are located. You anly need access to Internet & a computer/smartphone.",
+  buttonLabel: "Start Now!",
+  imgStart: true,
+  img: require("../../images/mobile-pay.png"),
+  alt: "Car",
+  dark: false,
+  primary: false,
+  darkText: true,
 };

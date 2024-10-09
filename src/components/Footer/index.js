@@ -17,8 +17,13 @@ import {
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
+import { animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
   return (
     <FooterContainer>
       <FooterWrap>
@@ -62,7 +67,7 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">Pesa Otas</SocialLogo>
+            <SocialLogo to="/" onClick={toggleHome}>Pesa Otas</SocialLogo>
             <WebsiteRights>
               Pesa Otas &#169; {new Date().getFullYear()} Allrights Reserved
             </WebsiteRights>
