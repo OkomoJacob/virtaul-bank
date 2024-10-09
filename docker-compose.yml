@@ -18,3 +18,16 @@ services:
       - NODE_ENV=developement
       
    # Producton Service
+  virtual-app-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    
+    # No need to set-up volumes in producton since nginx handles that.
+    
+    # Expose port 80 into a new 8080
+    ports:
+      - "8080:80"
+      
+    environment:
+      - NODE_ENV=production
